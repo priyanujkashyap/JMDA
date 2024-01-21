@@ -1,0 +1,148 @@
+{
+  "version": "2.0.0",
+  "cells": [
+    {
+      "type": "markdown",
+      "content": [
+        "# Lecture 1",
+        ""
+      ],
+      "metadata": {},
+      "outputs": []
+    },
+    {
+      "type": "code",
+      "content": [
+        "print, 'Hello world!'"
+      ],
+      "metadata": {},
+      "outputs": [
+        {
+          "items": [
+            {
+              "mime": "text/plain",
+              "content": [
+                "Hello world!",
+                ""
+              ]
+            }
+          ],
+          "metadata": {
+            "id": "not-saved"
+          }
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "content": [
+        "a=5",
+        "b=6",
+        "print, a/b",
+        "print, b/a"
+      ],
+      "metadata": {},
+      "outputs": [
+        {
+          "items": [
+            {
+              "mime": "text/plain",
+              "content": [
+                "       0",
+                "       1",
+                ""
+              ]
+            }
+          ],
+          "metadata": {
+            "id": "not-saved"
+          }
+        }
+      ]
+    },
+    {
+      "type": "markdown",
+      "content": [
+        "The output is given in integers. This is because IDL takes values as integers by default. To input floating numbers the numbers must be followed by a '.' as shown below."
+      ],
+      "metadata": {},
+      "outputs": []
+    },
+    {
+      "type": "code",
+      "content": [
+        "a=5.",
+        "b=6.",
+        "print, a/b",
+        "print, b/a"
+      ],
+      "metadata": {},
+      "outputs": [
+        {
+          "items": [
+            {
+              "mime": "text/plain",
+              "content": [
+                "     0.833333",
+                "      1.20000",
+                ""
+              ]
+            }
+          ],
+          "metadata": {
+            "id": "not-saved"
+          }
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "content": [
+        "x=findgen(1000)",
+        "y=x",
+        "plot, x, y"
+      ],
+      "metadata": {},
+      "outputs": []
+    },
+    {
+      "type": "code",
+      "content": [
+        "x=findgen(1000)",
+        "y=x",
+        "plot, x, y",
+        "oplot, x,x^2,col=255"
+      ],
+      "metadata": {},
+      "outputs": []
+    },
+    {
+      "type": "code",
+      "content": [
+        "x=(findgen(2000)-1000)/500",
+        "y=x",
+        "plot, x,y"
+      ],
+      "metadata": {},
+      "outputs": []
+    },
+    {
+      "type": "code",
+      "content": [
+        "seed=12",
+        "plot, randomu(seed,1000)"
+      ],
+      "metadata": {},
+      "outputs": []
+    },
+    {
+      "type": "code",
+      "content": [
+        "seed=12",
+        "plot, randomu(seed,1000),psym=3"
+      ],
+      "metadata": {},
+      "outputs": []
+    }
+  ]
+}
