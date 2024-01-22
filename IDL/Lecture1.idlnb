@@ -103,24 +103,7 @@
         "plot, x, y"
       ],
       "metadata": {},
-      "outputs": [
-        {
-          "items": [
-            {
-              "mime": "text/plain",
-              "content": [
-                "Warning: Detected system locale encoding (US-ASCII, locale \"\") is not UTF-8.",
-                "Qt shall use a UTF-8 locale (\"UTF-8\") instead. If this causes problems,",
-                "reconfigure your locale. See the locale(1) manual for more information.",
-                ""
-              ]
-            }
-          ],
-          "metadata": {
-            "id": "not-saved"
-          }
-        }
-      ]
+      "outputs": []
     },
     {
       "type": "code",
@@ -157,6 +140,24 @@
       "content": [
         "seed=12",
         "plot, randomu(seed,1000),psym=3"
+      ],
+      "metadata": {},
+      "outputs": []
+    },
+    {
+      "type": "code",
+      "content": [
+        "seed=12",
+        "plot, randomn(seed,1000)"
+      ],
+      "metadata": {},
+      "outputs": []
+    },
+    {
+      "type": "code",
+      "content": [
+        "seed=12",
+        "plot, randomn(seed,1000),psym=3"
       ],
       "metadata": {},
       "outputs": []
