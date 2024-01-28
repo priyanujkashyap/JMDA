@@ -129,7 +129,6 @@
     {
       "type": "code",
       "content": [
-        "seed=12",
         "plot, randomu(seed,1000)"
       ],
       "metadata": {},
@@ -138,7 +137,6 @@
     {
       "type": "code",
       "content": [
-        "seed=12",
         "plot, randomu(seed,1000),psym=3"
       ],
       "metadata": {},
@@ -147,7 +145,6 @@
     {
       "type": "code",
       "content": [
-        "seed=12",
         "plot, randomn(seed,1000)"
       ],
       "metadata": {},
@@ -156,8 +153,15 @@
     {
       "type": "code",
       "content": [
-        "seed=12",
         "plot, randomn(seed,1000),psym=3"
+      ],
+      "metadata": {},
+      "outputs": []
+    },
+    {
+      "type": "code",
+      "content": [
+        ""
       ],
       "metadata": {},
       "outputs": []

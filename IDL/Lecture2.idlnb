@@ -1,0 +1,377 @@
+{
+  "version": "2.0.0",
+  "cells": [
+    {
+      "type": "markdown",
+      "content": [
+        "### My Amazing IDL Notebook",
+        "",
+        "> Don't forget to save me to disk in order to get hover-help and auto-complete!"
+      ],
+      "metadata": {},
+      "outputs": []
+    },
+    {
+      "type": "code",
+      "content": [
+        "print, 'Hello world! IDL Notebooks are awesome.'"
+      ],
+      "metadata": {},
+      "outputs": []
+    },
+    {
+      "type": "code",
+      "content": [
+        "print, randomu(seed)"
+      ],
+      "metadata": {},
+      "outputs": [
+        {
+          "items": [
+            {
+              "mime": "text/plain",
+              "content": [
+                "     0.891655",
+                ""
+              ]
+            }
+          ],
+          "metadata": {
+            "id": "not-saved"
+          }
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "content": [
+        "seed = 0",
+        "for i=0,10 do print,randomu(seed)"
+      ],
+      "metadata": {},
+      "outputs": [
+        {
+          "items": [
+            {
+              "mime": "text/plain",
+              "content": [
+                "     0.548814",
+                "     0.592845",
+                "     0.715189",
+                "     0.844266",
+                "     0.602763",
+                "     0.857946",
+                "     0.544883",
+                "     0.847252",
+                "     0.423655",
+                "     0.623564",
+                "     0.645894",
+                ""
+              ]
+            }
+          ],
+          "metadata": {
+            "id": "not-saved"
+          }
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "content": [
+        "seed = systime(1)",
+        "vec = randomu(seed,100000)",
+        ""
+      ],
+      "metadata": {},
+      "outputs": []
+    },
+    {
+      "type": "code",
+      "content": [
+        "plot,vec"
+      ],
+      "metadata": {},
+      "outputs": [
+        {
+          "items": [
+            {
+              "mime": "text/plain",
+              "content": [
+                "Warning: Detected locale \"C\" with character encoding \"US-ASCII\", which is not UTF-8.",
+                "Qt depends on a UTF-8 locale, and has switched to \"UTF-8\" instead.",
+                "If this causes problems, reconfigure your locale. See the locale(1) manual",
+                "for more information.",
+                ""
+              ]
+            }
+          ],
+          "metadata": {
+            "id": "not-saved"
+          }
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "content": [
+        "plot,vec,psym=3"
+      ],
+      "metadata": {},
+      "outputs": []
+    },
+    {
+      "type": "code",
+      "content": [
+        "h=histogram(vec,min=0,bin=.01)",
+        "help,h"
+      ],
+      "metadata": {},
+      "outputs": [
+        {
+          "items": [
+            {
+              "mime": "text/plain",
+              "content": [
+                "H               LONG      = Array[100]",
+                ""
+              ]
+            }
+          ],
+          "metadata": {
+            "id": "not-saved"
+          }
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "content": [
+        "x=findgen(100)*.01",
+        "print, h"
+      ],
+      "metadata": {},
+      "outputs": [
+        {
+          "items": [
+            {
+              "mime": "text/plain",
+              "content": [
+                "        1020         937        1003        1001         964        1029         986         998        1000        1039         996",
+                "         978         971         999         959        1024        1009         994         986        1038         998        1015",
+                "         999         994        1039        1000         946         972        1025         993        1016        1038        1006",
+                "         968        1070        1032         985        1014        1002        1040         968         984         962         969",
+                "         965        1019        1041         974         975        1076        1054         997         996        1018         994",
+                "        1020        1018         977         961        1018         981         977        1002        1004        1028         962",
+                "         996         967        1009         929         952        1016        1037         989        1031         985         996",
+                "        1006         995         985        1011        1054         964        1049         961         939         985         962",
+                "         965         982        1013        1039         982        1048        1008         998        1050        1014        1013",
+                "        1047",
+                ""
+              ]
+            }
+          ],
+          "metadata": {
+            "id": "not-saved"
+          }
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "content": [
+        "plot,x,h"
+      ],
+      "metadata": {},
+      "outputs": []
+    },
+    {
+      "type": "code",
+      "content": [
+        "plot,x,h,/psym"
+      ],
+      "metadata": {},
+      "outputs": []
+    },
+    {
+      "type": "code",
+      "content": [
+        "plot,x,h,/psym,yrange=[0,1500]",
+        "print,stddev(h)"
+      ],
+      "metadata": {},
+      "outputs": [
+        {
+          "items": [
+            {
+              "mime": "text/plain",
+              "content": [
+                "      30.2261",
+                ""
+              ]
+            }
+          ],
+          "metadata": {
+            "id": "not-saved"
+          }
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "content": [
+        "seed=systime(1)",
+        "for iloop = 10,100,10 do begin",
+        "vec1 = randomu(seed,iloop)",
+        "print,iloop,mean(vec1),stddev(vec1)",
+        "endfor"
+      ],
+      "metadata": {},
+      "outputs": [
+        {
+          "items": [
+            {
+              "mime": "text/plain",
+              "content": [
+                "      10     0.417012     0.333575",
+                "      20     0.448887     0.293097",
+                "      30     0.517965     0.268171",
+                "      40     0.550790     0.290211",
+                "      50     0.450808     0.289533",
+                "      60     0.581315     0.280228",
+                "      70     0.514829     0.307991",
+                "      80     0.473941     0.299866",
+                "      90     0.496596     0.301275",
+                "     100     0.508852     0.284774",
+                ""
+              ]
+            }
+          ],
+          "metadata": {
+            "id": "not-saved"
+          }
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "content": [
+        "iloop=10",
+        "v=randomu(seed,iloop)",
+        "print,'No. of Heads',n_elements(where(v gt 0.5))"
+      ],
+      "metadata": {},
+      "outputs": [
+        {
+          "items": [
+            {
+              "mime": "text/plain",
+              "content": [
+                "No. of Heads           6",
+                ""
+              ]
+            }
+          ],
+          "metadata": {
+            "id": "not-saved"
+          }
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "content": [
+        "iloop=1000",
+        "heads=intarr(1000000)",
+        "for iflip=0,999999 do begin",
+        "    v1=randomu(seed,iloop)",
+        "    ;print,'No. of Heads',n_elements(where(v1 gt 0.5))",
+        "    heads(iflip)=n_elements(where(v1 gt 0.5))",
+        "endfor",
+        "plot,histogram(heads,min=0,bin=1)"
+      ],
+      "metadata": {},
+      "outputs": []
+    },
+    {
+      "type": "code",
+      "content": [
+        "seed= systime(1)",
+        "nmax=10000",
+        "nloop=10000",
+        "nheads = lonarr(nloop)",
+        "ntails = lonarr(nloop)",
+        "",
+        "for i=0l,nloop-1 do begin",
+        "    rnd = randomu(seed,nmax)",
+        "    heads = n_elements(where(rnd le 0.5))",
+        "    tails = n_elements(where(rnd gt 0.5))",
+        "    nheads(i)=heads",
+        "    ntails(i)=tails",
+        "endfor",
+        "plot,nheads/float(nmax),psym=100,yrange=[0,100]"
+      ],
+      "metadata": {},
+      "outputs": [
+        {
+          "items": [
+            {
+              "mime": "text/plain",
+              "content": [
+                "% Error: PLOT: range error: ",
+                "% Execution halted at: $MAIN$         14  /Users/priyanujkashyap/Documents/GitHub/JMDA/IDL/notebook_cell.pro",
+                ""
+              ]
+            }
+          ],
+          "metadata": {
+            "id": "not-saved"
+          }
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "content": [
+        "nloop=10000",
+        "nmax=(10l)^(lindgen(5)+1)",
+        "plot,[0,nloop],[0,1],/nodata",
+        "",
+        "for j=0,4 do begin",
+        "    nheads=lonarr(nloop)",
+        "    ntails=lonarr(nloop)",
+        "    for i=0l,nloop-1 do begin",
+        "      rnd=randomu(seed,nmax[j])",
+        "      rnd = randomu(seed,nmax)",
+        "      heads = n_elements(where(rnd le 0.5))",
+        "      tails = n_elements(where(rnd gt 0.5))",
+        "      nheads(i)=heads",
+        "      ntails(i)=tails",
+        "    endfor ; end i",
+        "  rat=nheads/float(nmax[j])",
+        "  oplot,rat,psym=(j+3),col=255^(j+1)",
+        "  wait,1",
+        "  print,nmax[j],mean(rat),stdev(rat)",
+        "endfor ; end j"
+      ],
+      "metadata": {},
+      "outputs": [
+        {
+          "items": [
+            {
+              "mime": "text/plain",
+              "content": [
+                "% Error: RANDOMU: out of memory: allocating 4031250000000000 bytes failed",
+                "% Execution halted at: $MAIN$         10  /Users/priyanujkashyap/Documents/GitHub/JMDA/IDL/notebook_cell.pro",
+                ""
+              ]
+            }
+          ],
+          "metadata": {
+            "id": "not-saved"
+          }
+        }
+      ]
+    }
+  ]
+}
