@@ -1,0 +1,225 @@
+{
+  "version": "2.0.0",
+  "cells": [
+    {
+      "type": "markdown",
+      "content": [
+        "### My Amazing IDL Notebook",
+        "",
+        "> Don't forget to save me to disk in order to get hover-help and auto-complete!"
+      ],
+      "metadata": {},
+      "outputs": []
+    },
+    {
+      "type": "code",
+      "content": [
+        "print, 'Hello world! IDL Notebooks are awesome.'"
+      ],
+      "metadata": {},
+      "outputs": []
+    },
+    {
+      "type": "code",
+      "content": [
+        "print,5+5",
+        "print,5*5",
+        "print,5/5",
+        "print,5-5",
+        "print,5+5*5",
+        "print,(5+5)*5",
+        "print,5^2"
+      ],
+      "metadata": {},
+      "outputs": [
+        {
+          "items": [
+            {
+              "mime": "text/plain",
+              "content": [
+                "      10",
+                "      25",
+                "       1",
+                "       0",
+                "      30",
+                "      50",
+                "      25",
+                ""
+              ]
+            }
+          ],
+          "metadata": {
+            "id": "not-saved"
+          }
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "content": [
+        "print,6-5",
+        "print,6/5",
+        "print,4/5",
+        "print,32767",
+        "print,32767+1",
+        "print,5-6",
+        "print,-32767",
+        "print,-32767-1",
+        "print,-32767-2"
+      ],
+      "metadata": {},
+      "outputs": [
+        {
+          "items": [
+            {
+              "mime": "text/plain",
+              "content": [
+                "       1",
+                "       1",
+                "       0",
+                "   32767",
+                "  -32768",
+                "      -1",
+                "  -32767",
+                "  -32768",
+                "   32767",
+                ""
+              ]
+            }
+          ],
+          "metadata": {
+            "id": "not-saved"
+          }
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "content": [
+        "print,6./5",
+        "print,long(32767)+1",
+        "print,float(6)/5",
+        "print,long(6)/5",
+        "print,1000*1000",
+        "print,1000l*1000",
+        "print,1000.*1000"
+      ],
+      "metadata": {},
+      "outputs": [
+        {
+          "items": [
+            {
+              "mime": "text/plain",
+              "content": [
+                "      1.20000",
+                "       32768",
+                "      1.20000",
+                "           1",
+                "   16960",
+                "     1000000",
+                "  1.00000e+06",
+                ""
+              ]
+            }
+          ],
+          "metadata": {
+            "id": "not-saved"
+          }
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "content": [
+        "a=findgen(10)",
+        "b=a*2",
+        "print,b",
+        "for i=0,9 do print,i,b(i)"
+      ],
+      "metadata": {},
+      "outputs": [
+        {
+          "items": [
+            {
+              "mime": "text/plain",
+              "content": [
+                "      0.00000      2.00000      4.00000      6.00000      8.00000      10.0000      12.0000      14.0000      16.0000      18.0000",
+                "       0      0.00000",
+                "       1      2.00000",
+                "       2      4.00000",
+                "       3      6.00000",
+                "       4      8.00000",
+                "       5      10.0000",
+                "       6      12.0000",
+                "       7      14.0000",
+                "       8      16.0000",
+                "       9      18.0000",
+                ""
+              ]
+            }
+          ],
+          "metadata": {
+            "id": "not-saved"
+          }
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "content": [
+        "a=findgen(2,2)",
+        "print,a*2",
+        "for i=0,1 do for j=0,1 do print,i,j,a(i,j)*2"
+      ],
+      "metadata": {},
+      "outputs": [
+        {
+          "items": [
+            {
+              "mime": "text/plain",
+              "content": [
+                "      0.00000      2.00000",
+                "      4.00000      6.00000",
+                "       0       0      0.00000",
+                "       0       1      4.00000",
+                "       1       0      2.00000",
+                "       1       1      6.00000",
+                ""
+              ]
+            }
+          ],
+          "metadata": {
+            "id": "not-saved"
+          }
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "content": [
+        "plot,indgen(10)",
+        "oplot,indgen(10)/2,col=255"
+      ],
+      "metadata": {},
+      "outputs": [
+        {
+          "items": [
+            {
+              "mime": "text/plain",
+              "content": [
+                "Warning: Detected locale \"C\" with character encoding \"US-ASCII\", which is not UTF-8.",
+                "Qt depends on a UTF-8 locale, and has switched to \"UTF-8\" instead.",
+                "If this causes problems, reconfigure your locale. See the locale(1) manual",
+                "for more information.",
+                ""
+              ]
+            }
+          ],
+          "metadata": {
+            "id": "not-saved"
+          }
+        }
+      ]
+    }
+  ]
+}
